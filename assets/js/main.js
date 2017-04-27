@@ -63,7 +63,21 @@ var res = [
 
 
 resul=[];
-for (var x=0; x<10; x++){
+for (var x=0; x<res.length; x++){
 resul[x]=res[x].title;
-document.write("<center><li>"+resul[x]+"</li></center>s");
+document.write("<center><li>"+resul[x]+"</li></center>");
+}
+
+function agregar(){
+
+	var input = document.getElementById("tarea");
+
+	var contTarea = document.getElementsByClassName("tarea-list");
+
+	contTarea[0].innerHTML += "<li>"+input.value +"</li>";
+
+	input.value = "";
+
+	resul.push(input);
+
 }
