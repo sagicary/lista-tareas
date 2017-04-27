@@ -66,8 +66,6 @@ for (var x=0; x<res.length; x++){
 resul[x]=res[x].title;
 }
 
-
-
 for (var i=0; i<resul.length; i++){
 //document.write("<center><li>"+resul[i]+"</li></center>");
 
@@ -78,17 +76,18 @@ document.getElementById('mostrar').innerHTML += ("<center><li>"+resul[i]+"</li><
 
 function agregar(){
 
-	var input = document.getElementById("tarea");
+    var input = document.getElementById("tarea");
 
-	var contTarea = document.getElementsByClassName("tarea-list");
+    var contTarea = document.getElementsByClassName("tarea-list");
 
-	contTarea[0].innerHTML += "<li>"+input.value +"</li>";
-	var m = document.getElementById("mostrar");
+    contTarea[0].innerHTML += "<li>"+input.value +"</li>";
+   res.push({
+        'title': input,
+    });
 
-	//m.innerHTML(input.value);
-	resul.push(input.value);
+  resul.push(input); 
 
-	input.value = "";
+    input.value = "";
 
 }
 
