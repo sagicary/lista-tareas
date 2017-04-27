@@ -61,12 +61,20 @@ var res = [
   }  
 ];
 
-
-resul=[];
+var resul=[];
 for (var x=0; x<res.length; x++){
 resul[x]=res[x].title;
-document.write("<center><li>"+resul[x]+"</li></center>");
 }
+
+
+
+for (var i=0; i<resul.length; i++){
+//document.write("<center><li>"+resul[i]+"</li></center>");
+
+document.getElementById('mostrar').innerHTML += ("<center><li>"+resul[i]+"</li></center>");
+}
+
+
 
 function agregar(){
 
@@ -75,9 +83,12 @@ function agregar(){
 	var contTarea = document.getElementsByClassName("tarea-list");
 
 	contTarea[0].innerHTML += "<li>"+input.value +"</li>";
+	var m = document.getElementById("mostrar");
+
+	//m.innerHTML(input.value);
+	resul.push(input.value);
 
 	input.value = "";
 
-	resul.push(input);
-
 }
+
